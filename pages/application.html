@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Заявки</title>
+  </head>
+  <body>
+    <menu class="main_menu">
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="../catalog/catalog.html">Каталог</a></li>
+      <li><a href="#">Оставить заявку</a></li>
+      <li><a href="../pages/contacts.html">Контакты</a></li>
+    </menu>
+    
+    <h1 class="heading_1">Оставить заявку</h1>
+
+    <form>
+        <label for="name">Ваше имя:</label><br>
+        <input class="input_page" type="text" id="name" name="name" placeholder="Введите ваше имя"><br>
+        
+        <label for="email">Почтовый ящик:</label><br>
+        <input class="input_page" required type="email" id="email" name="email" placeholder="Введите адрес почты"><br>
+        
+        <input class="input_button" required type="submit" value="Отправить">
+        <input class="input_button" type="reset" value="Отменить">
+    </form>
+
+    <img src="../img/cat.jpg" alt="Описание изображения" usemap="#map">
+
+    <map name="map">
+    <area  shape="circle" coords="50,50,100" href="https://vk.com" alt="Описание области 1" title="LINK">
+    <area  shape="circle" coords="150,150,100" href="ссылка2.html" alt="Описание области 2" title="LINK2">
+    <area  shape="circle" coords="250,250,100" href="ссылка3.html" alt="Описание области 3" title="LINK3">
+    </map>
+
+    <table border="1">
+        <tbody><tr>
+            <th>Заголовок 1</th>
+        <th>Заголовок 2</th>
+        <th>Заголовок 3</th></tr>
+            <tr>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae!</td>
+            <td>Lorem ipsum dolor sit.</td>
+            <td>Lorem ipsum dolor sit amet.</td>
+        </tr>
+    </tbody>
+    </table>
+
+  </body>
+</html>
