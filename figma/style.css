@@ -2,6 +2,7 @@
 {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 a {
@@ -14,27 +15,26 @@ a {
     padding-right: calc(50% - 585px);
 }
 
-body {
-    font-family: sans-serif;
-}
-
 .background {
     border: 1px solid #000;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
   }
   
 .menu_bar {
-    margin-top: 40px;
-    display: flex;
+    margin: 40px 0px 0px 0px;
+    display: grid;
     gap: 346px;
+    align-items: center;
+    grid-template-columns: min-content max-content;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: min-content max-content;
     gap: 14px;
+    align-content: center;
   }
 
 .logotext {
@@ -74,6 +74,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: nowrap;
 }
 
 .menu_button_red {
@@ -86,11 +87,11 @@ body {
     color: #FFF;
     font-family: Gilroy-SemiBold;
     font-size: 12px;
-    width: 120px;
-    height: 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2% 5%;
 }
 
 .check_mark_button {
@@ -104,9 +105,11 @@ body {
     margin:auto;
 }
 
+
+
 .image_1 {
     width: 545px;
-    height: 375px;
+    height: 375px; */
     flex-shrink: 0;
 }
 
@@ -124,6 +127,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    justify-content: flex-start;
 }
 
 .ellipse {
@@ -136,13 +140,21 @@ body {
     position: absolute;
     margin-top: -145px;
 }
-.title_home_meta {
+.title_home_meta,
+.title_home_block {
     color: #000;
     font-family: Gilroy-Bold;
-    font-size: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.title_home_meta {
+    font-size: 60px;
+}
+
+.title_home_block {
+    font-size: 45px;
 }
 
 .sub_title_home_meta,
@@ -152,6 +164,17 @@ body {
     font-family: Gilroy-Medium;
     font-weight: 400;
     word-wrap: break-word;
+}
+
+.sub_title_home_block {
+    color: #666;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    padding-top: 20px;
+    padding-bottom: 35px;
 }
 
 .sub_title_home_meta {
@@ -199,12 +222,43 @@ body {
     margin-top: 97px;
     margin-bottom: 96px;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .logo_brand {
-    width: 160px;
-    height: 50px;
+    width: 13%;
     flex-shrink: 0;
+}
+
+.about_us {
+    width: 100%;
+    flex-shrink: 0;
+    background: #FAFAFA;
+    /* background: #c81088; */
+}
+
+.element_1 {
+    width: 100%;
+    transform: rotate(2.095deg);
+    flex-shrink: 0;
+    stroke-width: 2px;
+    position: absolute;
+    margin-left: -350px;
+    margin-top: 125px;
+    /* margin: 0 auto; */
+}
+
+.element_2 {
+    width: 100%;
+    transform: rotate(2.095deg);
+    flex-shrink: 0;
+    stroke-width: 2px;
+    position: absolute;
+    margin-left: -350px;
+    margin-top: 75px;
+    /* margin: 0 auto; */
+}
+
+.image_2 {
+    width: 90%;
 }
