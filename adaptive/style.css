@@ -301,7 +301,8 @@ a {
     gap: 30px;
 }
   
-.advantages__item {
+.advantages__item, 
+.advantages__item_1 {
     width: 360px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -314,6 +315,10 @@ a {
     -ms-flex-align: center;
     align-items: center;
     gap: 24px;
+}
+
+.advantages__item_1 {
+    width: auto;
 }
   
 .advantages__heading {
@@ -373,6 +378,7 @@ a {
     text-align: center;
     color: #000;
     opacity: 100%;
+
 }
 
 .pred_footer__text__1 {
@@ -384,6 +390,7 @@ a {
     text-align: center;
     color: #000;
     opacity: 100%;
+    margin-bottom: 32px;
 }
 
 .bold {
@@ -392,6 +399,54 @@ a {
 
 .pred_footer__img {
     border-radius: 100px;
+}
+
+.input_place {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.pred_footer_input_btn {
+    border-radius: 50px;
+    width: 90%;
+    height: 100%;
+    color: rgb(34, 34, 36);
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 10%;
+    border: 0;
+}
+
+.pred_footer_input {
+    border-radius: 0px 50px 50px 0px;
+    width: 30%;
+    height: 100%;
+    background: rgba(224, 92, 110, 0.582);
+    position: absolute;
+    right: 0px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    border: 0;
+}
+
+.pred_footer_input:hover {
+    background: rgb(224, 92, 110);
+}
+
+.pred_footer_input:active {
+    border-bottom: #c40d25;
 }
 
 
