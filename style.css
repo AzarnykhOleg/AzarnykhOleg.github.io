@@ -1,109 +1,391 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
-
-:root {
-    --color-primary: #29097b;
-  }
-
-body {
-    font-family: sans-serif;
+* 
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Old Standard TT", sans-serif;
+  font-weight:bold;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
+.center {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
 }
 
-.main_menu {
-    color: rgb(100, 237, 230);
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    justify-content: space-evenly;
+.container {
+    grid-template-columns: 80vw 16vw;
+    display: grid;
+    gap: 1%;
+    margin: 1vw;
+    /* box-shadow:0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2); */
+    background:#FFF;
+    margin-bottom:200px;
 }
 
-.main_menu li {
-    height: 35px;
-    width: 250px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 150px / 80px;
-    border: 1px solid #F25822;
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 3%;
 }
-
-.main_menu li:nth-child(odd) {
-    background-color:rgb(248, 214, 198);
-}
-
-.main_menu li:nth-child(even) {
-    background-color:rgb(192, 185, 185);
-}
-
-.main_menu a:hover {
-    color: rgb(157, 100, 237);
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-weight: bolder;
+    color: #f39c12;
     font-size: 20px;
-    line-height: 24px;
 }
-
-.main_menu a:active {
-    color: rgb(208, 17, 173);
-    font-size: 24px;
-    line-height: 28px;
+.sidebar ul {
+    list-style-type: none;
 }
-
-.main_menu a:hover {
-    color: rgb(157, 100, 237);
-    font-size: 20px;
-    line-height: 24px;
-}
-
-.main_menu a:active {
-    color: rgb(208, 17, 173);
-    font-size: 24px;
-    line-height: 28px;
-}
-
-.heading_1 {
-    color: #222222;
-    font-size: 38px;
-    line-height: 36px;
-    font-weight: bold;
-    font-family: "Rubik Doodle Shadow";
-    font-style: normal; 
-}
-
-.heading_2 {
-    color: coral;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 80px;
-}
-
-.paragraph_all {
-    font-style: normal;
-    font-weight: 300;
+.sidebar li {
+    margin-bottom: 10px;
     font-size: 18px;
-    line-height: 30px;
-    color: #7D7987;
-    margin: 10px;
-    padding: 10px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+.sidebar a:hover {
+    color: #f39c12;
 }
 
-.input_page {
-    width: 200px;
-    height: 30px;
-    outline: none;
-    border: 1px solid var(--color-primary);
-    border-radius: 15px;
-    font-size: 14px;
-    line-height: 30px;
+.content {
+    background-color: #f5f5f5;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    gap: 2%;
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 2%;
 }
 
-.input_button {
-    width: 100px;
-    height: 30px;
-    font-size: 14px;
-    border: 1px solid var(--color-primary);
-    border-radius: 10px;
+
+
+.block-figure-4 {
+    position: relative;
+    display: block;
+    padding: 1%;
+    width: 40vw;
+    height: 40vw;
+}
+.block-figure-4 .triangle-1, 
+.block-figure-4 .triangle-2, 
+.block-figure-4 .triangle-1:after,
+.block-figure-4 .triangle-2:after,
+.block-figure-4 .triangle-1:before,
+.block-figure-4 .triangle-2:before  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.block-figure-4 .triangle-1, 
+.block-figure-4 .triangle-2 {
+    filter: drop-shadow(2px 6px 6px rgba(0, 0, 0, 0.4));
+}
+.block-figure-4 .triangle-1:after,
+.block-figure-4 .triangle-1:before {    
+    clip-path: polygon(0 0, 40% 0, 20% 100%, 20% 100%);
+    content: "";
+    transition: all .5s ease-in-out;    
+    background-size: cover;
+    background-position: center center;
+    background-image: url(./img/Red_Star_Order.png);        
+}
+.block-figure-4 .triangle-1:before {    
+    background: #333;    
+    z-index: 2;
+}
+.block-figure-4:hover .triangle-1:after,
+.block-figure-4:hover .triangle-1:before {
+    clip-path: polygon(0 0, 60% 0, 40% 100%, 0  100%);    
+} 
+.block-figure-4:hover .triangle-1:before {
+    background-color: rgba(51, 122, 183, 0);    
+} 
+ 
+.block-figure-4 .triangle-2:after,
+.block-figure-4 .triangle-2:before {
+    clip-path: polygon(80% 0, 100% 100%, 60% 100%, 80% 0);
+    content: "";
+    transition: all .5s ease-in-out;    
+    background-size:cover;
+    background-position: center center;
+    background-image: url(./img/Red_Star_Order.png);    
+}
+.block-figure-4 .triangle-2:before {    
+    background: #f39c12;    
+    z-index: 2;
+}
+.block-figure-4:hover .triangle-2:after,
+.block-figure-4:hover .triangle-2:before {
+    clip-path: polygon(100% 0, 100% 100%, 40% 100%, 60% 0);
+} 
+.block-figure-4:hover .triangle-2:before {
+    background-color: rgba(191, 226, 255, 0);    
+}
+.block-figure-4 .triangle-txt {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    padding: 1%;
+    margin: 1% 0% 0% 0%;
+    left: 0;
+    background: #f0ecec;
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);    
+    transition: all .5s ease-in-out;    
+}
+
+.block-figure-4:hover .triangle-txt {
+    left: 104%;
+    margin: 0% 0% 0% 0%;
+}
+.block-figure-4 .triangle-txt h3 {  
+    text-transform: uppercase;
+    color: #f39c12;
+    font-weight: bolder;
+    font-size: 20px; 
+    margin: 6px 0;
+}
+.block-figure-4 .triangle-txt p { 
+    font-size: 18px; 
+    margin: 6px 0;
+}
+
+.description {
+    position: relative;
+    text-align: center;
+    margin: 0 0 0 0%;
+    padding: 1%;
+    width: 40vw;
+    height: 40vw;
+}
+
+.description h3 {  
+    text-transform: uppercase;
+    color: #f39c12;
+    font-weight: bolder;
+    font-size: 20px; 
+    margin: 6px 0;
+}
+.description p {
+    font-size: 18px; 
+    margin: 6px 0;
+}
+
+
+
+
+.footer-parallax {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:-1;
+    height:200px;
+}
+
+
+.curveWrap {
+    background: #333;
+    width: 100%;
+    height: 200px;
+}
+.curveWrap .curve {
+stroke-linecap: round;
+    stroke-opacity: 0.7;
+}
+.curveWrap .curve path {
+    transform-origin: center;
+}
+.curveWrap .curve path:nth-child(6n + 1) {
+    stroke: #030303;
+}
+.curveWrap .curve path:nth-child(6n + 2) {
+    stroke: #f39c12;
+}
+.curveWrap .curve path:nth-child(6n + 3) {
+    stroke: #030303;
+}
+.curveWrap .curve path:nth-child(6n + 4) {
+    stroke: #f7b64d;
+}
+.curveWrap .curve path:nth-child(1) {
+    stroke-width: 24;
+    animation: curve 35s linear 1.4s infinite;
+}
+.curveWrap .curve path:nth-child(2) {
+    stroke-width: 21;
+    animation: curve 35s linear 2.8s infinite;
+}
+.curveWrap .curve path:nth-child(3) {
+    stroke-width: 48;
+    animation: curve 35s linear 4.2s infinite;
+}
+.curveWrap .curve path:nth-child(4) {
+    stroke-width: 41;
+    animation: curve 35s linear 5.6s infinite;
+}
+ 
+@keyframes curve {
+    0% {
+        transform: rotateX(0deg) skewY(0deg);
+        stroke-opacity: 0.7;
+    }
+    50% {
+        transform: rotateX(360deg) skewY(8deg);
+        stroke-opacity: 1;
+    }
+    100% {
+        transform: rotateX(0deg) skewY(0deg);
+        stroke-opacity: 0.7;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .footer-parallax {
+        position:static;
+    }
+}
+
+@media (max-width: 1024px) {
+    .description h3,
+    .block-figure-4 .triangle-txt h3, 
+    .sidebar h3 {  
+        font-size: 18px; 
+    }
+    .description p,
+    .block-figure-4 .triangle-txt p, 
+    .sidebar li {
+        font-size: 14px; 
+    }
+
+}
+
+@media (max-width: 768px) {
+    .center {
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+    }
+    .container {
+        grid-template-columns: 98vw 0vw;
+        gap: 0;
+    }
+    .content {
+        gap: 2vw;
+    }
+    .sidebar {
+        display: none;
+    }
+
+    .block-figure-4 .triangle-txt {
+        left: 0;
+    }
+    .block-figure-4:hover .triangle-txt {
+        left: 105%;
+    }
+    .block-figure-4 {
+        position: relative;
+        display: block;
+        width: 48vw;
+        height: 48vw;
+    }
+    .description {
+        position: relative;
+        text-align: center;
+        margin: 0 0 0 0%;
+        padding: 1%;
+        width: 48vw;
+        height: 48vw;
+    }
+    .container {
+        display: block;
+    }
+}
+
+@media (max-width: 540px) {
+    .center {
+        padding-left: calc(50% - 270px);
+        padding-right: calc(50% - 270px);
+    }
+    .sidebar {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 100vw 0px;
+        margin: 1vw 1vw 0vw 1vw;
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .block-figure-4 .triangle-txt {
+        left: 0;
+        top: 0;
+    }
+    .block-figure-4:hover .triangle-txt {
+        left: 0;
+        top: 100%;
+    }
+    .block-figure-4 {
+        position: relative;
+        display: block;
+        width: 98vw;
+        height: 98vw;
+        margin: 0vw 1vw 0vw 1vw;
+    }
+    .description {
+        width: 98vw;
+        height: auto;
+        margin: 0vw 1vw 0vw 1vw;
+    }
+    .footer-parallax {
+        height:50px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .center {
+        padding-left: calc(50% - 200px);
+        padding-right: calc(50% - 200px);
+    }
+    .sidebar {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 100vw 0px;
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .block-figure-4 .triangle-txt {
+        left: 0;
+        top: 0;
+    }
+    .block-figure-4:hover .triangle-txt {
+        left: 0;
+        top: 100%;
+    }
+    .description {
+        width: 98vw;
+        height: auto;
+        margin: 0vw 1vw 0vw 1vw;
+    }
+    .description h3,
+    .block-figure-4 .triangle-txt h3, 
+    .sidebar h3 {  
+        font-size: 16px; 
+    }
+    .description p,
+    .block-figure-4 .triangle-txt p, 
+    .sidebar li {
+        font-size: 13px; 
+    }
 }
