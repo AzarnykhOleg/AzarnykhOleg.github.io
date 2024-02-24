@@ -14,12 +14,6 @@
 .container {
     grid-template-columns: 80vw 17vw;
     display: grid;
-    gap: 1%;
-    margin: 1vw 1vw 0vw 1vw;
-    /* box-shadow:0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2); */
-    /* background:#FFF; */
-    /* margin-bottom:200px; */
-
 }
 
 .paralax_container_1,
@@ -40,7 +34,7 @@
 .sidebar {
     background-color: #333;
     color: white;
-    padding: 3%;
+    padding: 5%;
 }
 .sidebar h3 {
     margin-bottom: 20px;
@@ -65,19 +59,19 @@
 }
 
 .content {
-    /* background-color: #e7e7e7; */
     grid-template-columns: 50% 50%;
     display: grid;
     gap: 2%;
-    /* box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4); */
-    /* padding-top: 1%; */
-    padding-bottom: 1%;
-    margin-top: 2%;
+    justify-content: space-around;
+    justify-items: center;
+    padding: 2%;
 }
 .last_content {
-    padding-bottom: 0%;
+    padding-bottom: 2%;
 }
-
+.first_content {
+    margin-top: 0%;
+}
 
 
 
@@ -160,7 +154,7 @@
 }
 
 .block-figure-4:hover .triangle-txt {
-    left: 110%;
+    left: 105%;
     margin: 0% 0% 0% 0%;
 }
 
@@ -361,30 +355,33 @@ stroke-linecap: round;
         left: 0;
     }
     .block-figure-4:hover .triangle-txt {
-        left: 105%;
+        left: 109.5%;
     }
     .block-figure-4 {
         position: relative;
         display: block;
-        width: 48vw;
-        height: 48vw;
+        width: 45vw;
+        height: 45vw;
     }
     .description {
         position: relative;
         text-align: center;
         margin: 0 0 0 0%;
         padding: 1%;
-        width: 48vw;
-        height: 48vw;
+        width: 45vw;
+        height: 45vw;
     }
     .container {
         display: block;
+    }
+    .curveWrap_1 {
+        height: 15vh;
     }
 }
 
 @media (max-width: 768px) and (min-width: 540px) {
     .container {
-        margin: 1vw 1vw 0vw 1vw;
+        /* margin: 1vw 1vw 0vw 1vw; */
     }
 }
 
@@ -399,13 +396,13 @@ stroke-linecap: round;
     }
     .container {
         grid-template-columns: 100vw 0px;
-        margin: 1vw 1vw 0vw 1vw;
     }
     .content {
         display: flex;
         justify-content: space-evenly;
-        gap: 30px;
+        gap: 8vh;
         flex-wrap: wrap;
+        padding: 5vh 0vh 0vh 0vh;
     }
     .block-figure-4 .triangle-txt {
         left: 0;
@@ -413,7 +410,7 @@ stroke-linecap: round;
     }
     .block-figure-4:hover .triangle-txt {
         left: 0;
-        top: 100%;
+        top: 103%;
     }
     .block-figure-4 {
         position: relative;
@@ -425,13 +422,17 @@ stroke-linecap: round;
     .description {
         width: 98vw;
         height: auto;
-        margin: 0vw 1vw 0vw 1vw;
+        margin: 0vw 0vw 10vw 0vw;
     }
     .footer-parallax {
-        height:80px;
+        height: 15vh;
     }
     .curveWrap {
-        height: 80px;
+        height: 15vh;
+    }
+
+    .curveWrap_1 {
+        height: 10vh;
     }
 
 }
@@ -450,7 +451,7 @@ stroke-linecap: round;
     .content {
         display: flex;
         justify-content: space-evenly;
-        gap: 10px;
+        gap: 8vh;
         flex-wrap: wrap;
     }
     .block-figure-4 .triangle-txt {
@@ -459,12 +460,12 @@ stroke-linecap: round;
     }
     .block-figure-4:hover .triangle-txt {
         left: 0;
-        top: 100%;
+        top: 103%;
     }
     .description {
         width: 98vw;
         height: auto;
-        margin: 0vw 1vw 0vw 1vw;
+        margin: 0vw 0vw 8vw 0vw;
     }
     .description h3,
     .block-figure-4 .triangle-txt h3, 
