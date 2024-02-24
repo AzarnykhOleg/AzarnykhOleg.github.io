@@ -12,13 +12,29 @@
 }
 
 .container {
-    grid-template-columns: 80vw 16vw;
+    grid-template-columns: 80vw 17vw;
     display: grid;
     gap: 1%;
-    margin: 1vw;
+    margin: 1vw 1vw 0vw 1vw;
     /* box-shadow:0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2); */
-    background:#FFF;
-    margin-bottom:200px;
+    /* background:#FFF; */
+    /* margin-bottom:200px; */
+
+}
+
+.paralax_container_1,
+.paralax_container_2 {
+    background-attachment: fixed;
+    background-image: url(/img/Red_Star_Order.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.paralax_container_1 {
+    background-image: url(/img/Red_Star_Order.png);
+}
+.paralax_container_2 {
+    background-image: url(/img/Орден\ отечественной\ войны.jpg);
 }
 
 .sidebar {
@@ -49,15 +65,19 @@
 }
 
 .content {
-    background-color: #f5f5f5;
+    /* background-color: #e7e7e7; */
     grid-template-columns: 50% 50%;
     display: grid;
     gap: 2%;
-    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
-    padding-top: 1%;
+    /* box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4); */
+    /* padding-top: 1%; */
     padding-bottom: 1%;
     margin-top: 2%;
 }
+.last_content {
+    padding-bottom: 0%;
+}
+
 
 
 
@@ -65,8 +85,10 @@
     position: relative;
     display: block;
     padding: 1%;
-    width: 40vw;
-    height: 40vw;
+    width: 38vw;
+    height: 38vw;
+    background-color: #e7e7e7f3;
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
 }
 .block-figure-4 .triangle-1, 
 .block-figure-4 .triangle-2, 
@@ -129,37 +151,64 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    padding: 1%;
+    /* padding: 1%; */
     margin: 1% 0% 0% 0%;
     left: 0;
-    background: #f0ecec;
+    /* background: #f0ecec; */
     box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);    
     transition: all .5s ease-in-out;    
 }
 
 .block-figure-4:hover .triangle-txt {
-    left: 104%;
+    left: 110%;
     margin: 0% 0% 0% 0%;
 }
+
+
+
 .block-figure-4 .triangle-txt h3 {  
     text-transform: uppercase;
     color: #f39c12;
     font-weight: bolder;
     font-size: 20px; 
-    margin: 6px 0;
+    margin-top: 6px;
+    background: #f0ecec;
+    padding: 1%;
+    transition: all .5s
 }
 .block-figure-4 .triangle-txt p { 
     font-size: 18px; 
-    margin: 6px 0;
+    margin-bottom: 6px;
+    background: #f0ecec;
+    padding: 1%;
+    transition: all .5s
 }
+
+.block-figure-4:hover .whitespace,
+.block-figure-4:hover .triangle-txt h3,
+.block-figure-4:hover .triangle-txt p {
+    background: #f0ecec;
+    margin: 0;
+}
+
+.block-figure-4:hover .triangle-txt h3 {
+    padding-bottom: 6px;
+}
+
+.block-figure-4:hover .triangle-txt p {
+    padding-top: 6px;
+}
+
 
 .description {
     position: relative;
     text-align: center;
     margin: 0 0 0 0%;
     padding: 1%;
-    width: 40vw;
-    height: 40vw;
+    width: 38vw;
+    height: 38vw;
+    background-color: #e7e7e7f3;
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
 }
 
 .description h3 {  
@@ -174,11 +223,19 @@
     margin: 6px 0;
 }
 
+.whitespace {
+    height: 10px;
+    transition: all .5s
+}
 
-
+.buffer {
+    /* width: 100%; */
+    /* min-height: 10vh; */
+    /* background-color: #ffffff6b; */
+}
 
 .footer-parallax {
-    position:fixed;
+    /* position:fixed; */
     bottom:0;
     left:0;
     width:100%;
@@ -192,42 +249,63 @@
     width: 100%;
     height: 200px;
 }
-.curveWrap .curve {
+
+.curveWrap_1 {
+    background-color: #e7e7e796;
+    width: 100%;
+    height: 25vh;
+}
+
+.curveWrap .curve,
+.curveWrap_1 .curve {
 stroke-linecap: round;
     stroke-opacity: 0.7;
 }
-.curveWrap .curve path {
+.curveWrap .curve path,
+.curveWrap_1 .curve path {
     transform-origin: center;
 }
-.curveWrap .curve path:nth-child(6n + 1) {
+.curveWrap .curve path:nth-child(6n + 1),
+.curveWrap_1 .curve path:nth-child(6n + 1) {
     stroke: #030303;
 }
-.curveWrap .curve path:nth-child(6n + 2) {
+.curveWrap .curve path:nth-child(6n + 2),
+.curveWrap_1 .curve path:nth-child(6n + 2) {
     stroke: #f39c12;
 }
-.curveWrap .curve path:nth-child(6n + 3) {
+.curveWrap .curve path:nth-child(6n + 3),
+.curveWrap_1 .curve path:nth-child(6n + 3) {
     stroke: #030303;
 }
-.curveWrap .curve path:nth-child(6n + 4) {
+.curveWrap .curve path:nth-child(6n + 4),
+.curveWrap_1 .curve path:nth-child(6n + 4) {
     stroke: #f7b64d;
 }
-.curveWrap .curve path:nth-child(1) {
+.curveWrap .curve path:nth-child(1),
+.curveWrap_1 .curve path:nth-child(1) {
     stroke-width: 24;
     animation: curve 35s linear 1.4s infinite;
 }
-.curveWrap .curve path:nth-child(2) {
+.curveWrap .curve path:nth-child(2),
+.curveWrap_1 .curve path:nth-child(2) {
     stroke-width: 21;
     animation: curve 35s linear 2.8s infinite;
 }
-.curveWrap .curve path:nth-child(3) {
+.curveWrap .curve path:nth-child(3),
+.curveWrap_1 .curve path:nth-child(3) {
     stroke-width: 48;
     animation: curve 35s linear 4.2s infinite;
 }
-.curveWrap .curve path:nth-child(4) {
+.curveWrap .curve path:nth-child(4),
+.curveWrap_1 .curve path:nth-child(4) {
     stroke-width: 41;
     animation: curve 35s linear 5.6s infinite;
 }
- 
+
+.last_content_shadow {
+    box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
 @keyframes curve {
     0% {
         transform: rotateX(0deg) skewY(0deg);
@@ -304,6 +382,13 @@ stroke-linecap: round;
     }
 }
 
+@media (max-width: 768px) and (min-width: 540px) {
+    .container {
+        margin: 1vw 1vw 0vw 1vw;
+    }
+}
+
+
 @media (max-width: 540px) {
     .center {
         padding-left: calc(50% - 270px);
@@ -319,7 +404,7 @@ stroke-linecap: round;
     .content {
         display: flex;
         justify-content: space-evenly;
-        gap: 10px;
+        gap: 30px;
         flex-wrap: wrap;
     }
     .block-figure-4 .triangle-txt {
@@ -343,7 +428,10 @@ stroke-linecap: round;
         margin: 0vw 1vw 0vw 1vw;
     }
     .footer-parallax {
-        height:50px;
+        height:80px;
+    }
+    .curveWrap {
+        height: 80px;
     }
 
 }
