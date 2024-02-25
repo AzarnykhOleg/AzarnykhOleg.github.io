@@ -8,25 +8,25 @@
 }
 .header {
     z-index: 1;
-    width: 100%;
+    width: 100vw;
 }
 .center {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
 }
 .wrapper {
-    /* box-shadow: 10px 9px 8px 0px rgba(0, 0, 0, 0.4); */
+    /* display: block; */
 }
 .container {
     grid-template-columns: 80vw 20vw;
     display: grid;
+    background-color: #333;
 }
 
 .paralax_container_1,
 .paralax_container_2,
 .paralax_container_3 {
     background-attachment: fixed;
-    background-image: url(/img/Red_Star_Order.png);
     background-position: center;
     background-size: cover;
 }
@@ -47,7 +47,7 @@
     padding: 5vh 1vw;
     height: 100%;
     position: fixed;
-    z-index: -1;
+    z-index: 1;
     top: 10;
     right: 0;
     width: 17vw;
@@ -77,18 +77,18 @@
 }
 
 .content {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40vw 40vw;
     display: grid;
-    gap: 2%;
+    /* gap: 2%; */
     justify-content: space-around;
     justify-items: center;
-    padding: 10vh 2% 10vh 2%;
-}
-.last_content {
-    padding-bottom: 2%;
+    padding: 10vh 0 10vh 0;
 }
 .first_content {
-    margin-top: 0%;
+    padding-top: 20vh;
+}
+.last_content {
+    padding-bottom: 20vh;
 }
 
 
@@ -96,7 +96,7 @@
 .block-figure-4 {
     position: relative;
     display: block;
-    padding: 1%;
+    /* padding: 1vw; */
     width: 38vw;
     height: 38vw;
     background-color: #e7e7e7f3;
@@ -113,6 +113,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    margin: 0.5vw;
 }
 .block-figure-4 .triangle-1, 
 .block-figure-4 .triangle-2 {
@@ -183,12 +184,12 @@
     font-size: 20px; 
     margin-top: 6px;
     background: #f0ecec;
-    padding: 1%;
+    margin: 0.5vw;
     transition: all .5s
 }
 .block-figure-4 .triangle-txt p { 
     font-size: 18px; 
-    margin-bottom: 6px;
+    margin: 0.5vw;
     background: #f0ecec;
     padding: 1%;
     transition: all .5s
@@ -199,6 +200,10 @@
 .block-figure-4:hover .triangle-txt p {
     background: #f0ecec;
     margin: 0;
+}
+
+.block-figure-4:hover .triangle-txt h3 {
+    padding-top: 0.5vw;
 }
 
 .block-figure-4:hover .triangle-txt h3 {
@@ -213,8 +218,6 @@
 .description {
     position: relative;
     text-align: center;
-    margin: 0 0 0 0%;
-    padding: 1%;
     width: 38vw;
     height: 38vw;
     background-color: #e7e7e7f3;
@@ -226,11 +229,11 @@
     color: #f39c12;
     font-weight: bolder;
     font-size: 20px; 
-    margin: 6px 0;
+    margin: 0.5vw;
 }
 .description p {
     font-size: 18px; 
-    margin: 6px 0;
+    margin: 0.5vw;
 }
 
 .whitespace {
@@ -249,9 +252,9 @@
     bottom:0;
     left:0;
     width:100vw;
-    z-index: 1;
+    /* z-index: 2; */
     height:20vh;
-    background: #994444;
+    background: #333;
 }
 
 
@@ -263,7 +266,7 @@
 }
 
 .curveWrap_1 {
-    background-color: #e7e7e796;
+    background-color: #939393;
     width: 100%;
     height: 25vh;
 }
@@ -373,7 +376,7 @@ stroke-linecap: round;
         left: 0;
     }
     .block-figure-4:hover .triangle-txt {
-        left: 106%;
+        left: 108%;
     }
     .block-figure-4 {
         position: relative;
@@ -395,20 +398,20 @@ stroke-linecap: round;
     .curveWrap_1 {
         height: 15vh;
     }
-}
-
-@media (max-width: 768px) and (min-width: 540px) {
-    .container {
-        /* margin: 1vw 1vw 0vw 1vw; */
+    .description h3,
+    .block-figure-4 .triangle-txt h3, 
+    .sidebar h3 {  
+        font-size: 18px; 
+    }
+    .description p,
+    .block-figure-4 .triangle-txt p, 
+    .sidebar li {
+        font-size: 14px; 
     }
 }
 
 
 @media (max-width: 540px) {
-    .center {
-        padding-left: calc(50% - 270px);
-        padding-right: calc(50% - 270px);
-    }
     .sidebar {
         display: none;
     }
@@ -420,8 +423,15 @@ stroke-linecap: round;
         justify-content: space-evenly;
         gap: 15vh;
         flex-wrap: wrap;
-        padding: 15vh 0vh 0vh 0vh;
+        padding: 0vh 0vh 0vh 0vh;
     }
+    .first_content {
+        padding: 15vh 0vh 15vh 0vh;
+    }
+    .last_content {
+        padding: 15vh 0vh 15vh 0vh;
+    }
+
     .block-figure-4 .triangle-txt {
         left: 0;
         top: 0;
@@ -442,9 +452,7 @@ stroke-linecap: round;
         height: auto;
         margin: 0;
     }
-    .last_description {
-        padding-bottom: 15vh;
-    }
+
     .footer-parallax {
         height: 15vh;
     }
@@ -455,43 +463,6 @@ stroke-linecap: round;
     .curveWrap_1 {
         height: 10vh;
     }
-
-}
-
-@media (max-width: 400px) {
-    .center {
-        padding-left: calc(50% - 200px);
-        padding-right: calc(50% - 200px);
-    }
-    .sidebar {
-        display: none;
-    }
-    .container {
-        grid-template-columns: 100vw 0px;
-    }
-    .content {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 10vh;
-        flex-wrap: wrap;
-        padding: 10vh 0vh 0vh 0vh;
-    }
-    .last_description {
-        padding-bottom: 10vh;
-    }
-    .block-figure-4 .triangle-txt {
-        left: 0;
-        top: 0;
-    }
-    .block-figure-4:hover .triangle-txt {
-        left: 0;
-        top: 103%;
-    }
-    .description {
-        width: 98vw;
-        height: auto;
-        margin: 0vw 0vw 8vw 0vw;
-    }
     .description h3,
     .block-figure-4 .triangle-txt h3, 
     .sidebar h3 {  
@@ -500,6 +471,26 @@ stroke-linecap: round;
     .description p,
     .block-figure-4 .triangle-txt p, 
     .sidebar li {
-        font-size: 13px; 
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .content {
+        gap: 10vh;
+    }
+    .first_content,
+    .last_content {
+        padding: 10vh 0vh 10vh 0vh;
+    }
+    .description h3,
+    .block-figure-4 .triangle-txt h3, 
+    .sidebar h3 {  
+        font-size: 14px; 
+    }
+    .description p,
+    .block-figure-4 .triangle-txt p, 
+    .sidebar li {
+        font-size: 12px; 
     }
 }
