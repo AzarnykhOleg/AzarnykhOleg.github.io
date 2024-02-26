@@ -359,14 +359,14 @@ stroke-linecap: round;
     position: fixed;
     z-index: 999999;
     top: 0;
-    left: -85vw;
+    left: -55vw;
     background: #333;
     transition: all 0.5s;   
     width: 75vw;
     height: 100vh;
     box-shadow: 10px 0 20px rgba(0,0,0,0.4);
     color: #FFF;
-    padding: 40px 20px;
+    padding: 20px 0px 0px 10px;
 }
 .side-title {
     font-size: 20px;
