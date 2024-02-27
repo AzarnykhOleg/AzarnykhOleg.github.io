@@ -2,8 +2,8 @@
 {
     margin: 0;
     padding: 0;
-    font-family: "Old Standard TT", sans-serif;
-    font-weight:bold;
+    font-family: Veranda, "Old Standard TT", sans-serif;
+    /* font-weight:bold; */
     /* font-size: calc( (100vw - 30rem)/(80 - 30) * (1.5 - 1) + 1rem); */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -143,6 +143,7 @@
 .block-figure-4:hover .triangle-txt {
     left: 105%;
     margin: 0% 0% 0% 0%;
+    z-index: 0;
 }
 
 
@@ -152,7 +153,7 @@
     color: #f39c12;
     font-weight: bolder;
     font-size: 20px; 
-    margin-top: 6px;
+    padding: 1vh 0px;
     background: #f0ecec;
     margin: 0.5vw;
     transition: all .5s
@@ -169,7 +170,7 @@
 .block-figure-4:hover .triangle-txt h3,
 .block-figure-4:hover .triangle-txt p {
     background: #f0ecec;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .block-figure-4:hover .triangle-txt h3 {
@@ -190,8 +191,9 @@
     text-align: center;
     width: 38vw;
     height: 38vw;
-    background-color: #e7e7e7f3;
+    background-color: #e7e7e7f8;
     box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
+    overflow: auto;
 }
 
 .description h3 {  
@@ -238,7 +240,7 @@
 .curveWrap_1 {
     background-color: #939393;
     width: 100%;
-    height: 25vh;
+    height: 15vh;
 }
 
 .curveWrap .curve,
@@ -357,6 +359,7 @@ stroke-linecap: round;
 }
 .side-panel {
     position: fixed;
+    overflow: scroll;
     z-index: 999999;
     top: 0;
     left: -55vw;
@@ -366,13 +369,18 @@ stroke-linecap: round;
     height: 100vh;
     box-shadow: 10px 0 20px rgba(0,0,0,0.4);
     color: #FFF;
-    padding: 20px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
 }
 .side-title {
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    position: fixed;
+    font-size: 25px;
+    padding: 15px 0px ;
+    margin-bottom: 30px;
     border-bottom: 2px solid #BFE2FF;
+    /* z-index: -1; */
+    background: #333;
+    width: 72vw;
+    height: 15px;
 }
 /* Оформление кнопки на странице */
 .side-button-1-wr {
@@ -450,7 +458,9 @@ stroke-linecap: round;
     cursor: pointer;
     transform: rotate(45deg);
     color: #BFE2FF;    
-    transition: all 280ms ease-in-out;    
+    transition: all 280ms ease-in-out;
+    background: #333;  
+    /* position: fixed;   */
 }
 .side-button-2:hover {
     transform: rotate(45deg) scale(1.1);    
@@ -480,21 +490,22 @@ stroke-linecap: round;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     .description h3,
     .block-figure-4 .triangle-txt h3, 
     .sidebar h3 {  
         font-size: 18px; 
     }
     .description p,
-    .block-figure-4 .triangle-txt p, 
-    .sidebar li {
+    .block-figure-4 .triangle-txt p {
         font-size: 14px; 
     }
-
+    .sidebar li {
+        font-size: 11px; 
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 932px) {
     .center {
         padding-left: calc(50% - 384px);
         padding-right: calc(50% - 384px);
@@ -556,8 +567,19 @@ stroke-linecap: round;
     .navigate {
         display: none;
     }
+    .side-title {
+        width: 38vw;
+    }
 }
 
+@media (max-width: 700px) {
+    .side-panel {
+        width: 55vw;
+    }
+    .side-title {
+        width: 53vw;
+    }
+}
 
 @media (max-width: 540px) {
     .sidebar {
@@ -579,6 +601,13 @@ stroke-linecap: round;
     .last_content {
         padding: 15vh 0vh 15vh 0vh;
     }
+
+    .block-figure-4:hover .whitespace {
+        background: #f0ecec00;
+        margin: 0;
+        height: 18vw;
+    }
+
 
     .block-figure-4 .triangle-txt {
         left: 0;
@@ -623,6 +652,9 @@ stroke-linecap: round;
     }
     .side-panel {
         width: 75vw;
+    }
+    .side-title {
+        width: 73vw;
     }
 }
 
