@@ -10,11 +10,23 @@
     appearance: none;
 }
 .header {
-    z-index: 1;
-    width: 100vw;
-    position:fixed;
+    width: 80vw;
+    position:absolute;
     z-index: 5;
 }
+
+.navigate {
+    height: 10vh;
+    background-color: #333;
+    box-shadow: -20px 0px 3px 20px #f39c1254;
+    /* border-radius: 0 0 5px 0;
+    border-color: #f39c12;
+    border: #f39c12;
+    border-bottom-color: #f39c12;
+    border-bottom-width: 12vh;
+    border-inline-width: 12px; */
+}
+
 .center {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
@@ -223,10 +235,11 @@
     /* position:fixed; */
     bottom:0;
     left:0;
-    width:100vw;
-    /* z-index: 2; */
+    width:87vw;
+    z-index: 22;
     height:20vh;
     background: #333;
+    /* box-shadow: -20px 0px 3px 20px #f39c1254; */
 }
 
 
@@ -298,18 +311,29 @@ stroke-linecap: round;
 }
 
 
+
+
 .sidebar {
     background-color: #333;
     color: white;
-    padding: 5vh 1vw;
-    height: 100%;
+    padding: 10vh 1vw 20vw 1vw;
+    height: 100vh;
     position: fixed;
     z-index: 1;
-    top: 10;
+    /* top: 10vh; */
+    /* bottom: 20vh; */
     right: 0;
     width: 17vw;
     overflow-x: hidden;
 }
+
+/* sidebar_img {
+    height: 20vh;
+    width: 120vw;
+    background-color: #e74d4d;
+    color: #e74d4d;
+    z-index: 45;
+} */
 
 .sidebar h3,
 .side-panel h3 {
@@ -360,7 +384,7 @@ stroke-linecap: round;
 .side-panel {
     position: fixed;
     overflow: scroll;
-    z-index: 999999;
+    z-index: 20;
     top: 0;
     left: -55vw;
     background: #333;
