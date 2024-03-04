@@ -27,6 +27,11 @@
     border-inline-width: 12px; */
 }
 
+.fighters {
+    padding: 10vw 5% 0vw 5%;
+    width: 90%;
+}
+
 .center {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
@@ -527,6 +532,10 @@ stroke-linecap: round;
     .sidebar li {
         font-size: 11px; 
     }
+    .fighters {
+        padding: 15vw 2% 0vw 2%;
+        width: 96%;
+    }
 }
 
 @media (max-width: 932px) {
@@ -593,6 +602,11 @@ stroke-linecap: round;
     }
     .side-title {
         width: 38vw;
+    }
+    .footer-parallax {
+        width: 100vw;
+        box-shadow: -2px -9px 7px 0px #f39c1254;
+        /* box-shadow: inset 0px 0px 20px 0px #f39c1254; */
     }
 }
 
@@ -679,6 +693,10 @@ stroke-linecap: round;
     }
     .side-title {
         width: 73vw;
+    }
+    .fighters {
+        padding: 20vw 1% 0vw 1%;
+        width: 98%;
     }
 }
 
