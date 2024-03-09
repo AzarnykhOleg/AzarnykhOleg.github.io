@@ -9,6 +9,11 @@
     -moz-appearance: none;
     appearance: none;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
 .header {
     width: 80vw;
     position:absolute;
@@ -19,6 +24,8 @@
     height: 10vh;
     background-color: #333;
     box-shadow: -20px 0px 3px 20px #f39c1254;
+    z-index: 995;
+    width: 100vw;
     /* border-radius: 0 0 5px 0;
     border-color: #f39c12;
     border: #f39c12;
@@ -244,15 +251,16 @@
     z-index: 22;
     height:20vh;
     background: #333;
-    /* box-shadow: -20px 0px 3px 20px #f39c1254; */
+    box-shadow: inset -20px 0px 12px 7px #f39c12e0;
 }
+
 
 
 .curveWrap {
     background: #333;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    z-index: -1;
+    z-index: 999;
 }
 
 .curveWrap_1 {
@@ -321,8 +329,9 @@ stroke-linecap: round;
 .sidebar {
     background-color: #333;
     color: white;
-    padding: 10vh 1vw 20vw 1vw;
-    height: 100vh;
+    padding: 0vh 1vw 0vw 1vw;
+    margin: 13vh 0px 13vh 0px;
+    height: 65vh;
     position: fixed;
     z-index: 1;
     /* top: 10vh; */
@@ -393,7 +402,7 @@ stroke-linecap: round;
     top: 0;
     left: -55vw;
     background: #333;
-    transition: all 0.5s;   
+    transition: all 0.7s;   
     width: 75vw;
     height: 100vh;
     box-shadow: 10px 0 20px rgba(0,0,0,0.4);
@@ -404,7 +413,7 @@ stroke-linecap: round;
     position: fixed;
     font-size: 25px;
     padding: 15px 0px ;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     border-bottom: 2px solid #BFE2FF;
     /* z-index: -1; */
     background: #333;
@@ -413,13 +422,17 @@ stroke-linecap: round;
 }
 /* Оформление кнопки на странице */
 .side-button-1-wr {
-    text-align: right; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
+    display: block;
+    position: fixed;
+    /* text-align: right; Контейнер для кнопки, чтобы было удобнее ее разместить */
 }
 .side-button-1 {
     display: inline-block;
+    width: 0vw;
 }
 .side-button-1 .side-b {
-    margin: 2vw 3vw;
+    margin: 2vw;
+    margin-left: 92vw; /*-------------*/
     text-decoration: none;
     position: relative;
     font-size: 20px;
@@ -428,41 +441,53 @@ stroke-linecap: round;
     color: #FFF;
     font-weight: bold;
     text-transform: uppercase; 
-    background: #f39c12;
+    /* background: #cc935a91; */
     cursor: pointer; 
-    border: 2px solid #BFE2FF;
+    /* border: 2px solid #BFE2FF; */
+    width: 5vw;
+    height: 5vw;
 }
-.side-button-1 .side-b:hover,
+.side-button-1 .side-open {
+    margin-left: 92vw;
+    width: 5vw;
+    height: 5vw;
+    /* background: #cc935a; */
+}
+
+/* .side-button-1 .side-b:hover,
 .side-button-1 .side-b:active,
 .side-button-1 .side-b:focus {
     color: #FFF;
-}
-.side-button-1 .side-b:after,
+} */
+
+/*.side-button-1 .side-b:after,
 .side-button-1 .side-b:before {
     position: absolute;
     height: 4px;
     left: 50%;
     bottom: -6px;
     content: "";
-    transition: all 280ms ease-in-out;
+    transition: all 980ms ease-in-out;
     width: 0;
-}
-.side-button-1 .side-open:after,
+}*/
+
+/* .side-button-1 .side-open:after,
 .side-button-1 .side-open:before {
     background: green;
-}
-.side-button-1 .side-close:after,
+} */
+/* .side-button-1 .side-close:after,
 .side-button-1 .side-close:before {
     background: red;
-}
-.side-button-1 .side-b:before {
+} */
+/* .side-button-1 .side-b:before {
     top: -6px;
-}
-.side-button-1 .side-b:hover:after,
+} */
+/* .side-button-1 .side-b:hover:after,
 .side-button-1 .side-b:hover:before {
     width: 100%;
     left: 0;
-}
+} */
+
 /* Переключатели кнопки 1 */
 .side-button-1 .side-close {
     display: none;
@@ -489,7 +514,6 @@ stroke-linecap: round;
     color: #BFE2FF;    
     transition: all 280ms ease-in-out;
     background: #333;  
-    /* position: fixed;   */
 }
 .side-button-2:hover {
     transform: rotate(45deg) scale(1.1);    
@@ -590,8 +614,15 @@ stroke-linecap: round;
     .sidebar li {
         font-size: 14px; 
     }
+
     .mobile_menu {
-        display: contents;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 8vh;
+        background-color: #333;
+        box-shadow: 0px 6px 7px 0px #f39c1254;
+        z-index: -91;
     }
     .side-panel {
         left: -85vw;
@@ -605,8 +636,11 @@ stroke-linecap: round;
     }
     .footer-parallax {
         width: 100vw;
-        box-shadow: -2px -9px 7px 0px #f39c1254;
-        /* box-shadow: inset 0px 0px 20px 0px #f39c1254; */
+        box-shadow: -1px -8px 14px 0px #f39c126b;
+    }
+    .fighters {
+        padding: 12vh 1% 0vw 1%;
+        width: 98%;
     }
 }
 
@@ -653,8 +687,13 @@ stroke-linecap: round;
     }
     .block-figure-4:hover .triangle-txt {
         left: 0;
-        top: 103%;
+        top: 101%;
     }
+    .block-figure-4:hover .triangle-txt p, 
+    .block-figure-4:hover .triangle-txt .whitespace {
+        display: none;
+    }
+
     .block-figure-4 {
         position: relative;
         display: block;
@@ -695,8 +734,18 @@ stroke-linecap: round;
         width: 73vw;
     }
     .fighters {
-        padding: 20vw 1% 0vw 1%;
+        padding: 9vh 1% 0vw 1%;
         width: 98%;
+    }
+    .side-button-1 .side-b,
+    .side-button-1 .side-open,
+    .side-button-1 .side-close {
+        margin-left: 87vw;
+        width: 7vw;
+        height: 7vw;
+    }
+    .mobile_menu {
+        height: 6vh;
     }
 }
 
