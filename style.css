@@ -351,7 +351,7 @@ stroke-linecap: round;
 
 .sidebar h3,
 .side-panel h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bolder;
     color: #f39c12;
     font-size: 20px;
@@ -395,6 +395,10 @@ stroke-linecap: round;
 #side-checkbox {
     display: none;
 }
+.side-content {
+    padding: 10vh 0px 20px 0px;
+    z-index: -1;
+}
 .side-panel {
     position: fixed;
     overflow: scroll;
@@ -423,6 +427,26 @@ stroke-linecap: round;
     justify-content: center;
     align-items: center;
 }
+
+
+.mobile_menu_el {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.logo {
+    margin-left: 1vw;
+}
+
+.logo_name p{
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 55px;
+    color: #f39c12;
+    text-shadow: -3px -3px 8px rgb(195 14 14 / 81%);
+}
+
 /* Оформление кнопки на странице */
 .side-button-1-wr {
     display: block;
@@ -437,10 +461,15 @@ stroke-linecap: round;
 .side-button-1 .side-b {
     position: relative;
     /* cursor: pointer;  */
-    margin-top: 2vw;
-    margin-left: 93vw;
+    /* float: right; */
+    margin-top: 0.5vw;
+    margin-left: 92vw;
+    /* padding-right: 8vw; */
     /* width: 5vw;
     height: 5vw; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 .side-button-1 .side-open {
     /* margin-left: 90vw; */
@@ -610,10 +639,14 @@ stroke-linecap: round;
     }
 
     .mobile_menu {
+        /* display: flex;
+        justify-content: space-between; */
         display: block;
         position: fixed;
         width: 100%;
-        height: 8vh;
+        /* height: 8vh; */
+        padding: 5px;
+        min-height: 60px;
         background-color: #333;
         box-shadow: 0px 6px 7px 0px #f39c1254;
         z-index: -91;
@@ -638,6 +671,12 @@ stroke-linecap: round;
     }
 }
 
+@media (max-width: 932px) and (orientation: landscape) {
+    .mobile_menu {
+        height: 8vw;
+    }
+}
+
 @media (max-width: 700px) {
     .side-panel {
         width: 55vw;
@@ -648,9 +687,21 @@ stroke-linecap: round;
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
-        margin-top: 1.5vw;
-        margin-left: 90vw;
+        margin-top: 1vw;
+        margin-left: 89vw;
     }
+    .logo_name p{
+        /* font-weight: 40; */
+        font-size: 45px;
+    }
+}
+
+@media (orientation: landscape) {
+    .side-content {
+        padding: 17vh 0px 20px 0px;
+        z-index: -1;
+    }
+
 }
 
 @media (max-width: 540px) {
@@ -673,14 +724,11 @@ stroke-linecap: round;
     .last_content {
         padding: 15vh 0vh 15vh 0vh;
     }
-
     .block-figure-4:hover .whitespace {
         background: #f0ecec00;
         margin: 0;
         height: 18vw;
     }
-
-
     .block-figure-4 .triangle-txt {
         left: 0;
         top: 0;
@@ -734,20 +782,31 @@ stroke-linecap: round;
         width: 73vw;
     }
     .fighters {
-        padding: 9vh 1% 0vw 1%;
+        padding: 12vh 1% 0vw 1%;
         width: 98%;
     }
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
-        margin-top: 1.5vw;
-        margin-left: 87vw;
+        margin-top: 1vw;
+        margin-left: 85.5vw;
     }
     .mobile_menu {
-        height: 6vh;
+        height: 7vh;
     }
     .side-title {
         height: 3vh;
+    }
+    .logo_name p{
+        /* font-weight: 40; */
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo_name p{
+        /* font-weight: 40; */
+        font-size: 36px;
     }
 }
 
@@ -783,13 +842,32 @@ stroke-linecap: round;
         margin-top: 1.5vw;
         margin-left: 84vw;
     }
+    .logo_name p{
+        /* font-weight: 40; */
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 355px) {
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
-        margin-top: 1.5vw;
+        margin-bottom: 5vw;
         margin-left: 82vw;
+    }
+    .logo_name p{
+        /* font-weight: 40; */
+        font-size: 24px;
+    }
+}
+@media (orientation: landscape) and (max-width: 355px) {
+    .mobile_menu {
+        height: 8vw;
+    }
+    .side-button-1 .side-b,
+    .side-button-1 .side-open,
+    .side-button-1 .side-close {
+        margin-bottom: 5vw;
+        margin-left: 6vw;
     }
 }
