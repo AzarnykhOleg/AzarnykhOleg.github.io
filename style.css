@@ -411,47 +411,41 @@ stroke-linecap: round;
 }
 .side-title {
     position: fixed;
-    font-size: 25px;
+    font-size: 35px;
     padding: 15px 0px ;
     margin-bottom: 90px;
     border-bottom: 2px solid #BFE2FF;
     /* z-index: -1; */
     background: #333;
     width: 72vw;
-    height: 15px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Оформление кнопки на странице */
 .side-button-1-wr {
     display: block;
     position: fixed;
-    /* text-align: right; Контейнер для кнопки, чтобы было удобнее ее разместить */
+    /* text-align: right; */
+/*Контейнер для кнопки, чтобы было удобнее ее разместить */
 }
 .side-button-1 {
     display: inline-block;
     width: 0vw;
 }
 .side-button-1 .side-b {
-    margin: 2vw;
-    margin-left: 92vw; /*-------------*/
-    text-decoration: none;
     position: relative;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 10px;
-    color: #FFF;
-    font-weight: bold;
-    text-transform: uppercase; 
-    /* background: #cc935a91; */
-    cursor: pointer; 
-    /* border: 2px solid #BFE2FF; */
-    width: 5vw;
-    height: 5vw;
+    /* cursor: pointer;  */
+    margin-top: 2vw;
+    margin-left: 93vw;
+    /* width: 5vw;
+    height: 5vw; */
 }
 .side-button-1 .side-open {
-    margin-left: 92vw;
-    width: 5vw;
-    height: 5vw;
-    /* background: #cc935a; */
+    /* margin-left: 90vw; */
+    /* width: 5vw;
+    height: 5vw; */
 }
 
 /* .side-button-1 .side-b:hover,
@@ -651,6 +645,12 @@ stroke-linecap: round;
     .side-title {
         width: 53vw;
     }
+    .side-button-1 .side-b,
+    .side-button-1 .side-open,
+    .side-button-1 .side-close {
+        margin-top: 1.5vw;
+        margin-left: 90vw;
+    }
 }
 
 @media (max-width: 540px) {
@@ -740,12 +740,14 @@ stroke-linecap: round;
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
+        margin-top: 1.5vw;
         margin-left: 87vw;
-        width: 7vw;
-        height: 7vw;
     }
     .mobile_menu {
         height: 6vh;
+    }
+    .side-title {
+        height: 3vh;
     }
 }
 
@@ -774,5 +776,20 @@ stroke-linecap: round;
     .side-panel li {
         margin-bottom: 10px;
         font-size: 15px;
+    }
+    .side-button-1 .side-b,
+    .side-button-1 .side-open,
+    .side-button-1 .side-close {
+        margin-top: 1.5vw;
+        margin-left: 84vw;
+    }
+}
+
+@media (max-width: 355px) {
+    .side-button-1 .side-b,
+    .side-button-1 .side-open,
+    .side-button-1 .side-close {
+        margin-top: 1.5vw;
+        margin-left: 82vw;
     }
 }
