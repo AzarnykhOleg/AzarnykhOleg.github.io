@@ -320,10 +320,33 @@ stroke-linecap: round;
     z-index: -91;
 }
 
+
+
 .logo {
-    width: 70px;
+    width: 75px;
     height: 70px;
-    margin:3px;
+}
+.logo_1 {
+    width: 35px;
+    height: 70px;
+}
+.logo_2 {
+    width: 40px;
+    height: 70px;
+}
+.logo,
+.logo_1,
+.logo_2 {
+    transition: all 0.5s;
+}
+
+.logo:hover,
+.logo_1:hover,
+.logo_2:hover {
+    border-radius: 45px;
+    /* border-style:solid; */
+    background-color: #646464;
+    box-shadow: olive 0px -2px 13px 9px #f39c1254;
 }
 
 .sidebar {
@@ -443,6 +466,10 @@ stroke-linecap: round;
     font-size: 55px;
     color: #f39c12;
     text-shadow: -3px -3px 8px rgb(195 14 14 / 81%);
+}
+
+.desktop_menu .logo_name p {
+        letter-spacing: 15px;
 }
 
 /* Оформление кнопки на странице */
@@ -572,6 +599,9 @@ stroke-linecap: round;
         padding: 15vw 2% 0vw 2%;
         width: 96%;
     }
+    .desktop_menu .logo_name p {
+        letter-spacing: 0px;
+}
 }
 
 @media (max-width: 932px) {
@@ -635,7 +665,7 @@ stroke-linecap: round;
         display: block;
         position: fixed;
         width: 100%;
-        /* height: 8vh; */
+        height: 9vh;
         padding: 5px;
         min-height: 60px;
         background-color: #333;
@@ -662,8 +692,12 @@ stroke-linecap: round;
     }
     .logo {
         margin-left: 1vw;
-        height: 77px;
-        width: 77px;
+        height: 68px;
+        width: 68px;
+    }
+    .logo_name p{
+        letter-spacing: 7px;
+        font-size: 45px;
     }
 }
 
@@ -687,7 +721,7 @@ stroke-linecap: round;
         margin-left: 89vw;
     }
     .logo_name p{
-        /* font-weight: 40; */
+        letter-spacing: 1px;
         font-size: 45px;
     }
 }
@@ -784,17 +818,17 @@ stroke-linecap: round;
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
-        margin-top: 1vw;
+        margin-top: 2vw;
         margin-left: 85.5vw;
     }
     .mobile_menu {
-        height: 7vh;
+        height: 8vh;
     }
     .side-title {
         height: 3vh;
     }
     .logo_name p{
-        /* font-weight: 40; */
+        letter-spacing: 0px;
         font-size: 38px;
     }
     .logo {
@@ -806,8 +840,7 @@ stroke-linecap: round;
 
 @media (max-width: 450px) {
     .logo_name p{
-        /* font-weight: 40; */
-        font-size: 36px;
+        font-size: 34px;
     }
     .logo {
         margin-left: 1vw;
@@ -818,7 +851,6 @@ stroke-linecap: round;
 
 @media (max-width: 415px) {
     .logo_name p{
-        /* font-weight: 40; */
         font-size: 35px;
     }
     .logo {
@@ -857,7 +889,7 @@ stroke-linecap: round;
     .side-button-1 .side-b,
     .side-button-1 .side-open,
     .side-button-1 .side-close {
-        margin-top: 1.5vw;
+        margin-top: 2vw;
         margin-left: 84vw;
     }
     .logo_name p{
@@ -893,7 +925,7 @@ stroke-linecap: round;
         margin-left: 82vw;
     }
     .logo_name p{
-        font-size: 18px;
+        font-size: 23px;
     }
     .logo {
         height: 40px;
