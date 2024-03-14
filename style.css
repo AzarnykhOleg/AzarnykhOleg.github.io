@@ -320,7 +320,10 @@ stroke-linecap: round;
     z-index: -91;
 }
 
-
+.hover-image-scale {
+    display: inline-block; 
+    overflow: hidden; /* Скрываем всё за контуром */
+}
 
 .logo {
     width: 75px;
@@ -334,19 +337,23 @@ stroke-linecap: round;
     width: 40px;
     height: 70px;
 }
+
 .logo,
 .logo_1,
 .logo_2 {
-    transition: all 0.5s;
+    transition: 1s; /* Время эффекта */
+    display: block; 
 }
 
-.logo:hover,
-.logo_1:hover,
-.logo_2:hover {
+.logo:hover {
     border-radius: 45px;
-    /* border-style:solid; */
-    background-color: #646464;
-    box-shadow: olive 0px -2px 13px 9px #f39c1254;
+    transform: scale(1.5);
+}
+
+.logo_2:hover,
+.logo_1:hover {
+    border-radius: 45px;
+    transform: scale(1.5) translate(0px, -15px);
 }
 
 .sidebar {
