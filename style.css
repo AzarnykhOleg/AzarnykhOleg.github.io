@@ -196,6 +196,28 @@
     padding-top: 6px;
 }
 
+.description_fighters {
+    position: relative;
+    text-align: center;
+    width: 96%;
+    height: 12vh;
+    background-color: #e7e7e7f8;
+    box-shadow: 2px 12px 15px rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    margin: 5vw 2% 0vw 2%;
+    display: grid;
+    align-content: center;
+}
+
+.description_fighters h3 {  
+    text-transform: uppercase;
+    color: #f39c12;
+    font-weight: bolder;
+    font-size: 25px; 
+    margin: 0.5vw;
+    /* font-family: "Caveat";
+    font-weight: bold; */
+}
 
 .description {
     position: relative;
@@ -567,6 +589,35 @@ stroke-linecap: round;
 }
 
 
+@media (max-width: 2265px) {
+    .description_fighters {
+        height: 10vw;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 25px; 
+    }
+}
+
+@media (max-width: 2075px) {
+    .description_fighters {
+        height: 24vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 23px; 
+    }
+}
+
+@media (max-width: 1800px) {
+    .description_fighters {
+        height: 24vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 21px; 
+    }
+}
 
 @keyframes curve {
     0% {
@@ -608,7 +659,14 @@ stroke-linecap: round;
     }
     .desktop_menu .logo_name p {
         letter-spacing: 0px;
-}
+    }
+    .description_fighters {
+        height: 17vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 15px; 
+    }
 }
 
 @media (max-width: 932px) {
@@ -638,6 +696,14 @@ stroke-linecap: round;
         display: block;
         width: 47vw;
         height: 47vw;
+    }
+    .description_fighters {
+        height: 22vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    
+    .description_fighters h3 {  
+        font-size: 20px; 
     }
     .description {
         position: relative;
@@ -730,6 +796,13 @@ stroke-linecap: round;
     .logo_name p{
         letter-spacing: 1px;
         font-size: 45px;
+    }
+    .description_fighters {
+        height: 18vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 15px; 
     }
 }
 
@@ -854,6 +927,13 @@ stroke-linecap: round;
         height: 60px;
         width: 60px;
     }
+    .description_fighters {
+        height: 15vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 13px; 
+    }
 }
 
 @media (max-width: 415px) {
@@ -864,6 +944,13 @@ stroke-linecap: round;
         margin-left: 1vw;
         height: 55px;
         width: 55px;
+    }
+    .description_fighters {
+        height: 14vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 11px; 
     }
 }
 
@@ -921,6 +1008,13 @@ stroke-linecap: round;
     .logo {
         height: 54px;
         width: 54px;
+    }
+    .description_fighters {
+        height: 14vh;
+        margin: 5vw 2% 0vw 2%;
+    }
+    .description_fighters h3 {  
+        font-size: 11px; 
     }
 }
 
