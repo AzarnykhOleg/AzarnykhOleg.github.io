@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+:root {
+    --color-primary: #29097b;
+  }
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.main_menu {
+    color: rgb(100, 237, 230);
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main_menu li {
+    height: 35px;
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 150px / 80px;
+    border: 1px solid #F25822;
+}
+
+.main_menu li:nth-child(odd) {
+    background-color:rgb(248, 214, 198);
+}
+
+.main_menu li:nth-child(even) {
+    background-color:rgb(192, 185, 185);
+}
+
+.main_menu a:hover {
+    color: rgb(157, 100, 237);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main_menu a:active {
+    color: rgb(208, 17, 173);
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.main_menu a:hover {
+    color: rgb(157, 100, 237);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main_menu a:active {
+    color: rgb(208, 17, 173);
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.heading_1 {
+    color: #222222;
+    font-size: 38px;
+    line-height: 36px;
+    font-weight: bold;
+    font-family: "Rubik Doodle Shadow";
+    font-style: normal; 
+}
+
+.heading_2 {
+    color: coral;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
+}
+
+.paragraph_all {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7D7987;
+    margin: 10px;
+    padding: 10px;
+}
+
+.input_page {
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.input_button {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+}
